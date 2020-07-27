@@ -1,0 +1,2 @@
+# foxc
+foxc init
