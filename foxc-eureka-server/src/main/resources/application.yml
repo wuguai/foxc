@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: foxc-eureka-server
+  profiles:
+    active: @profiles.active@
+  security:
+    user:
+      name: foxc
+      password: foxc@ww
+
+logging:
+  config: classpath:logback.xml
