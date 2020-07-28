@@ -2,7 +2,7 @@ server:
   port: 8801
 eureka:
   instance:
-    hostname: 127.0.0.1
+    hostname: localhost
     prefer-ip-address: true
   server:
     enable-self-preservation: true
@@ -10,6 +10,6 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-    service-url:
+    serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   environment: @profiles.active@
