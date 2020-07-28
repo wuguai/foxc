@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: foxc-data-tracert
+  profiles:
+    active: @profiles.active@
+
+logging:
+  config: classpath:logback.xml
