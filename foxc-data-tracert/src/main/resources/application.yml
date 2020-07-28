@@ -3,6 +3,8 @@ spring:
     name: foxc-data-tracert
   profiles:
     active: @profiles.active@
+  jackson:
+    default-property-inclusion: non_null
 
 logging:
   config: classpath:logback.xml

@@ -2,7 +2,7 @@
 <configuration  scan="true" scanPeriod="60 seconds" debug="false">
 
     <property name="appName" value="foxc-eureka-server" />
-    <property name="log.path" value="${appName}/logs" />
+    <property name="log.path" value="/home/${appName}/logs" />
     <property name="log.pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - [%method,%line] - %msg%n" />
 
     <contextName>${appName}</contextName>

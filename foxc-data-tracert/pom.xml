@@ -46,6 +46,12 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <!-- JSON工具类 fastjson依赖 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+
     </dependencies>
 
     <repositories>

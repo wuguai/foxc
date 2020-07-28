@@ -6,7 +6,7 @@ spring:
   security:
     user:
       name: foxc
-      password: foxc#ww
+      password: foxc_www
 
 logging:
   config: classpath:logback.xml
