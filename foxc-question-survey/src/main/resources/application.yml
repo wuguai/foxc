@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: foxc-question-survey
+  profiles:
+    active: @profiles.active@
+  jackson:
+    default-property-inclusion: non_null
+    date-format: java.text.SimpleDateFormat
+logging:
+  config: classpath:logback.xml

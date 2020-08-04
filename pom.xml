@@ -6,6 +6,9 @@
     <modules>
         <module>foxc-eureka-server</module>
         <module>foxc-data-tracert</module>
+        <module>foxc-question-survey</module>
+        <module>foxc-provider-user</module>
+        <module>foxc-consumer-movie</module>
     </modules>
 
     <parent>
