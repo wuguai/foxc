@@ -9,6 +9,8 @@
         <module>foxc-question-survey</module>
         <module>foxc-provider-user</module>
         <module>foxc-consumer-movie</module>
+        <module>foxc-consumer-movie-feign-customizing</module>
+        <module>foxc-provider-user-with-auth</module>
     </modules>
 
     <parent>
