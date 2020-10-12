@@ -11,7 +11,7 @@
 
     <groupId>com.foxc.question.survey</groupId>
     <artifactId>foxc-question-survey</artifactId>
-    <name>foxc-data-tracert</name>
+    <name>foxc-question-survey</name>
     <description>foxc问券调查服务</description>
 
     <dependencies>
