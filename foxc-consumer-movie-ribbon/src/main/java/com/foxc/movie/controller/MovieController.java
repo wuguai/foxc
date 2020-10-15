@@ -19,14 +19,14 @@ public class MovieController {
 
     private final LoadBalancerClient loadBalancerClient;
 
-    @GetMapping(value = "/user/findById/{id}")
+    /*@GetMapping(value = "/user/findById/{id}")
     public JsonVO findUserById(@PathVariable(name = "id") Integer id){
         JsonVO jsonVO = restTemplate.getForObject("http://localhost:8001/user/findById/" + id, JsonVO.class);
         log.info("restTemplate.getForObject.findUserById=>{}", jsonVO);
         return jsonVO;
-    }
+    }*/
 
-    @GetMapping(value = "/user/findById2/{id}")
+    @GetMapping(value = "/user/findById/{id}")
     public JsonVO findUserById2(@PathVariable(name = "id") Integer id){
         JsonVO jsonVO = restTemplate.getForObject("http://foxc-provider-user/user/findById/" + id, JsonVO.class);
         log.info("restTemplate.getForObject.findUserById=>{}", jsonVO);
