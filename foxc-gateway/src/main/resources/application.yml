@@ -1,0 +1,9 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: foxc-gateway-zuul
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://foxc:foxc_www@localhost:8801/eureka/
