@@ -11,8 +11,8 @@
 
 
     <groupId>com.foxc.gateway</groupId>
-    <artifactId>com.foxc.gateway</artifactId>
-    <name>foxc-consumer-gateway</name>
+    <artifactId>foxc-gateway</artifactId>
+    <name>foxc-gateway</name>
     <description>foxc微服务网关</description>
 
     <dependencies>
