@@ -7,3 +7,20 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://foxc:foxc_www@localhost:8801/eureka/
+
+# zuul 路由配置
+zuul:
+  routes:
+    foxc-user:
+      path: /foxc-user/**
+#      url: http://localhost:8001
+      serviceId: foxc-provider-user
+    foxc-movie-ribbon:
+      path: /foxc-movie-ribbon/**
+      serviceId: foxc-consumer-movie-ribbon
+    foxc-movie:
+      path: /foxc-movie/**
+      serviceId: foxc-consumer-movie
+    foxc-survey:
+      path: /foxc-survey/**
+      serviceId: foxc-question-survey
