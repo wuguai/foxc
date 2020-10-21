@@ -29,7 +29,8 @@ public class MovieController {
     @GetMapping(value = "/user/findById/{id}")
     public JsonVO findUserById2(@PathVariable(name = "id") Integer id){
         JsonVO jsonVO = restTemplate.getForObject("http://foxc-provider-user/user/findById/" + id, JsonVO.class);
-        log.info("restTemplate.getForObject.findUserById=>{}", jsonVO);
+        System.out.println("JsonVO=>"+jsonVO.toString());
+        log.info("restTemplate.getForObject.findUserById=>{}", jsonVO.toString());
         return jsonVO;
     }
 
