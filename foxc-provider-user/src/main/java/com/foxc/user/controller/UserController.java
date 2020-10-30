@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Slf4j
@@ -25,6 +27,21 @@ public class UserController {
         JsonVO jsonVO = new JsonVO();
         jsonVO.put("user", user);
         log.info("foxc-provide-user->/user/findById/{},user=>{}",id, JSONObject.toJSONString(jsonVO));
+        return jsonVO;
+    }
+
+    @GetMapping("/user/list")
+    public JsonVO getUserList() throws InterruptedException {
+        List<Map> userList = new ArrayList<>();
+        Map<String,Object> user = new HashMap<>();
+        user.put("userId",1001);
+        user.put("userName", "张三");
+        user.put("age", 12);
+        userList.add(user);
+        JsonVO jsonVO = new JsonVO();
+        jsonVO.put("userList", userList);
+        log.info("foxc-provide-user->/user/list/,userList=>{}", JSONObject.toJSONString(jsonVO));
+        Thread.sleep(10000);
         return jsonVO;
     }
 
