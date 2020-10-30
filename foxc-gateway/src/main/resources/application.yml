@@ -10,6 +10,12 @@ eureka:
 
 # zuul 路由配置
 zuul:
+  # 配置饥饿加载
+  ribbon:
+    eager-load:
+      enabled: true
+    MaxAutoRetries: 3
+    MaxAutoRetriesNextServer: 0
   routes:
     foxc-user:
       path: /foxc-user/**
@@ -24,3 +30,7 @@ zuul:
     foxc-survey:
       path: /foxc-survey/**
       serviceId: foxc-question-survey
+  # zuul忽略所有默认路由，所有服务都需配置路由规则，否则饥饿加载不生效
+  ignored-services: /**
+  # 开启zuul重试机制
+  retryable: true
