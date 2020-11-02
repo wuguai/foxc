@@ -1,6 +1,6 @@
-package com.foxc.gateway.fallback;
+package com.foxc.zuul.fallback;
 
-import com.foxc.gateway.vo.JsonVO;
+import com.foxc.zuul.vo.JsonVO;
 import org.springframework.cloud.netflix.zuul.filters.route.FallbackProvider;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
