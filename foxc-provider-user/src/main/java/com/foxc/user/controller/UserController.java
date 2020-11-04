@@ -41,7 +41,10 @@ public class UserController {
         JsonVO jsonVO = new JsonVO();
         jsonVO.put("userList", userList);
         log.info("foxc-provide-user->/user/list/,userList=>{}", JSONObject.toJSONString(jsonVO));
-        Thread.sleep(10000);
+        Thread.sleep(6000);
+        // 不要期待在gateway中捕捉后端服务的异常
+        // System.out.println(1/0);
+        log.info("foxc-provide-user->/user/list/ end...");
         return jsonVO;
     }
 

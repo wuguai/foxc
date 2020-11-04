@@ -1,4 +1,4 @@
-package com.foxc.vo;
+package com.foxc.gateway.vo;
 
 import com.alibaba.fastjson.JSONObject;
 

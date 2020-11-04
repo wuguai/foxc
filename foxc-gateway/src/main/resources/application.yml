@@ -11,8 +11,8 @@ spring:
           uri: lb://foxc-provider-user
           predicates:
             - Path=/foxc-user/**
-#            - Query=accessToken,123.
-#            - Query=foxc,web
+            - Query=accessToken,123.
+            - Query=foxc,web
 #            - Method=GET
 #            - Header=X-Request-Id, \d+
 #            - Cookie=sessionId, test
@@ -23,25 +23,36 @@ spring:
             - StripPrefix=1
             - name: Hystrix # 使用Hystrix进行服务熔断降级
               args:
-                name: fallbackcmd
+                name: foxcUserFallbackCmd
                 fallbackUri: forward:/foxcUserFallBack
+        - id: foxc-consumer-movie-route
+          uri: lb://foxc-consumer-movie
+          predicates:
+            - Path=/foxc-movie/**
+          filters:
+            - StripPrefix=1
+        - id: foxc-consumer-movie-feign-customizing-route
+          uri: lb://foxc-consumer-movie-feign-customizing
+          predicates:
+            - Path=/foxc-movie-feign/**
+          filters:
+            - StripPrefix=1
+        - id: foxc-consumer-movie-ribbon-route
+          uri: lb://foxc-consumer-movie-ribbon
+          predicates:
+            - Path=/foxc-movie-ribbon/**
+          filters:
+            - StripPrefix=1
 
 # 配置foxcUserFallbackCmd超时熔断时间
-#hystrix:
-#  command:
-#    foxcUserFallbackCmd:
-#      execution:
-#        isolation:
-#          thread:
-#            timeoutInMilliseconds: 5000
-
 hystrix:
   command:
-    fallbackcmd:
+    foxcUserFallbackCmd:
       execution:
         isolation:
           thread:
             timeoutInMilliseconds: 5000
+
 
 
 eureka:
