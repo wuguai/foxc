@@ -1,0 +1,4 @@
+server:
+  port: 8001
+
+from: from-foxc-user-test-1.0

@@ -1,0 +1,14 @@
+server:
+  port: 8001
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 2
+    lease-expiration-duration-in-seconds: 10
+    metadata-map:
+      my-metadata: 我自定义的元数据
+  client:
+    serviceUrl:
+      defaultZone: http://foxc:foxc_www@localhost:8801/eureka/
+
+from: from-foxc-user-dev-1.0
