@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: foxc-user
+  cloud:
+    config:
+      # 通过uri配置config-server
+#      uri: http://localhost:8889
+      profile: prod
+      label: dev
+      # 通过eureka服务注册与发现查找配置server，实现config-server集群高可用
+      discovery:
+        enabled: true
+        service-id: foxc-config-server
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 2
+    lease-expiration-duration-in-seconds: 10
+    metadata-map:
+      my-metadata: 我自定义的元数据
+  client:
+    service-url:
+      defaultZone: http://foxc:foxc_www@localhost:8801/eureka/
+
+management:
+  server:
+    port: 8001
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: health, info, refresh

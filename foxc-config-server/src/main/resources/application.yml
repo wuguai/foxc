@@ -1,0 +1,19 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: foxc-config-server
+  cloud:
+    # git配置管理
+    config:
+      server:
+        git:
+          uri: https://github.com/wuguai/foxc/
+          search-paths: config-repo
+          username: chounong@126.com
+          password: w@8859881111
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://foxc:foxc_www@localhost:8801/eureka/

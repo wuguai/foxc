@@ -14,6 +14,7 @@
         <module>foxc-consumer-movie-ribbon</module>
         <module>foxc-zuul</module>
         <module>foxc-gateway</module>
+        <module>foxc-config-server</module>
     </modules>
 
     <parent>
