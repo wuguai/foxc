@@ -1,4 +1,4 @@
 server:
   port: 8001
 
-from: from-foxc-user-prod-1.0
+from: from-foxc-user-prod-2.0
